@@ -1,0 +1,25 @@
+config_name: jeomri
+description: "jeomri"
+model_name: jeomri
+
+epochs: 180
+
+dataset_name: dataset
+dataset_params:
+  dataset_path: '/path/to/dataset'
+  sigma: 0.01
+val_data: True
+
+batch_size: 1
+
+
+restore_weights: best 
+resume_model: False
+
+loss_image_name: MSE
+loss_edge_name: L1
+score_names: ['PSNR', 'SSIM']
+optim_name: Adam
+optim_params:
+  lr: 0.001
+gradient_clip: False 
